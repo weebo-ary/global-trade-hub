@@ -32,7 +32,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-1 text-white mb-6 text-shadow-lg"
+            className="heading-1 text-primary-foreground mb-6 text-shadow-lg"
           >
             Premium Indian Exports to{" "}
             <span className="text-accent">45+ Countries</span>
@@ -42,7 +42,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-white/80 mb-8 max-w-2xl leading-relaxed"
+            className="text-xl text-primary-foreground/80 mb-8 max-w-2xl leading-relaxed"
           >
             Your trusted partner for fresh produce, FMCG products, superfoods, and
             premium canned goods. Government-certified exporter with world-class
@@ -57,7 +57,7 @@ const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-green-dark text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+              className="bg-accent hover:bg-green-dark text-primary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link to="/contact">
@@ -68,7 +68,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
+              className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 text-lg px-8 py-6"
               asChild
             >
               <Link to="/products">Explore Products</Link>
@@ -92,8 +92,8 @@ const HeroSection = () => {
                 className="glass-card-dark rounded-xl p-4 text-center"
               >
                 <stat.icon className="w-6 h-6 text-accent mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-white/60 text-sm">{stat.label}</div>
+                <div className="text-2xl font-bold text-primary-foreground">{stat.value}</div>
+                <div className="text-primary-foreground/60 text-sm">{stat.label}</div>
               </div>
             ))}
           </motion.div>
