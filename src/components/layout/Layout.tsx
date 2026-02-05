@@ -14,6 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="flex flex-col min-h-screen">
       <DemoBanner />
       <Header />
+      {/* pt-28 = 7rem (demo banner 2rem + header ~5rem) */}
       <main className="flex-1 pt-28">{children}</main>
       <Footer />
       <FloatingElements />

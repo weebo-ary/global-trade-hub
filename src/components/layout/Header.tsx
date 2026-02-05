@@ -65,7 +65,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xl">H</span>
+                <span className="text-primary-foreground font-bold text-xl">H</span>
               </div>
               <div className="hidden sm:block">
                 <h1 className="font-bold text-lg text-primary leading-tight">
@@ -99,13 +99,13 @@ const Header = () => {
               {/* Language Selector */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="gap-1 hidden md:flex">
+                  <Button variant="ghost" size="sm" className="gap-1 hidden md:flex text-foreground">
                     <Globe className="w-4 h-4" />
                     {selectedLang}
                     <ChevronDown className="w-3 h-3" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="end" className="bg-white z-50">
                   {languages.map((lang) => (
                     <DropdownMenuItem
                       key={lang.code}
@@ -121,7 +121,7 @@ const Header = () => {
               {/* Get Quote Button */}
               <Button
                 onClick={() => setIsQuoteOpen(true)}
-                className="bg-accent hover:bg-green-dark text-white font-semibold shadow-lg hover:shadow-xl transition-all hidden sm:flex"
+                className="bg-accent hover:bg-green-dark text-accent-foreground font-semibold shadow-lg hover:shadow-xl transition-all hidden sm:flex"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Get Quote
@@ -130,7 +130,7 @@ const Header = () => {
               {/* Mobile Menu */}
               <Sheet open={isMobileOpen} onOpenChange={setIsMobileOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="lg:hidden">
+                  <Button variant="ghost" size="icon" className="lg:hidden text-foreground">
                     <Menu className="w-6 h-6" />
                   </Button>
                 </SheetTrigger>
@@ -139,7 +139,7 @@ const Header = () => {
                     <div className="flex items-center justify-between mb-8">
                       <div className="flex items-center gap-2">
                         <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                          <span className="text-white font-bold text-xl">H</span>
+                          <span className="text-primary-foreground font-bold text-xl">H</span>
                         </div>
                         <span className="font-bold text-primary">HKR Global</span>
                       </div>
@@ -153,7 +153,7 @@ const Header = () => {
                           onClick={() => setIsMobileOpen(false)}
                           className={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                             location.pathname === link.path
-                              ? "text-white bg-accent"
+                              ? "text-accent-foreground bg-accent"
                               : "text-foreground hover:bg-secondary"
                           }`}
                         >
@@ -175,7 +175,7 @@ const Header = () => {
                           setIsMobileOpen(false);
                           setIsQuoteOpen(true);
                         }}
-                        className="w-full bg-accent hover:bg-green-dark text-white font-semibold"
+                        className="w-full bg-accent hover:bg-green-dark text-accent-foreground font-semibold"
                       >
                         Get Quote
                       </Button>
